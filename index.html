@@ -1,0 +1,789 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>FASAA Rehabilitation Center - Norton</title>
+
+        <!-- CSS FILES -->        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+`
+        <link href="css/main.css" rel="stylesheet">
+
+        <style>
+    .product-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text inside the container */
+            margin-left: 100px;
+        }
+        .product-title {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .product-description {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .price {
+            font-size: 20px;
+            color: #28a745;
+            margin: 10px 0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center buttons */
+            width: 100%;
+        }
+        .order-button, .read-more-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .order-button:hover, .read-more-button:hover {
+            background-color: #218838;
+        }
+        .button-spacing {
+            width: 150px; /* Adds 150px space between buttons */
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px; /* Ensures a maximum width for better alignment */
+            text-align: left; /* Align text to the left */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .payment-spacing {
+            width: 2cm; /* Adds 2cm space between payment buttons */
+        }
+        .form-container {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+        }
+        .form-container input, 
+        .form-container textarea, 
+        .form-container select {
+            width: calc(100% - 24px); /* Full width minus padding and border */
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s;
+        }
+        .form-container input:focus,
+        .form-container select:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+        .form-container textarea {
+            resize: vertical;
+        }
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+        .form-container h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+
+
+
+    </head>
+    
+    <body id="section_1">
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-8 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-geo-alt me-2"></i>
+                            4164 Nharira View, Norton, Zimbabwe
+                        </p>
+
+                        
+
+                        
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-telephone me-2"></i>
+                        
+                            <a href="tel: +263 77 288 8479">
+                                +263 77 288 8479
+                            </a>
+                        </p><br>
+
+                        
+                        <p class="d-flex mb-0">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@company.com">
+                                getbetter@fasaa.org
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="https://x.com/fasaa_centre" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://www.facebook.com/fasaarehab" class="social-icon-link bi-facebook"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://www.linkedin.com/in/fasaa-rehab-5a60742b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon-link bi-linkedin"></a>
+                            </li>
+                          
+
+                            <li class="social-icon-item">
+                                <a href="https://www.instagram.com/fasaa_rehab_001?utm_source=qr&igsh=YXM1dWVlZjRzdnF0" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/@fasaarehabilitationcentre?si=1rpS9r0WTaMQhex_" class="social-icon-link bi-youtube"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://chat.whatsapp.com/GKKJODOKDc6Bgs9zwskWGj" class="social-icon-link bi-whatsapp"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg" style="width: 100%;" >
+            <div class="container" >
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" class="logo img-fluid" alt="FASAA Rehabilitation Center">
+                    <span>
+                      FASAA 
+                        <small>Rehabilitation Centre</small>
+                    </span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link click-scroll dropdown-toggle" href="#section_2" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="history.html">Our Story</a></li>
+
+                                <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+
+                                <li><a class="dropdown-item" href="news.html">News</a></li>
+
+                                <li><a class="dropdown-item" href="vmv.html">Vision, Mission & Values</a></li>
+                            </ul>
+                        </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link click-scroll dropdown-toggle" href="#section_3" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conditions We Treat</a>
+    
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="drugs.html">Addictions</a></li>
+
+                                    <li><a class="dropdown-item" href="behavioral.html">Bahavioral Disorders</a></li>
+    
+                                    <li><a class="dropdown-item" href="mental-health.html">Mental Health Conditions</a></li>
+
+                                </ul>
+                            </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link click-scroll dropdown-toggle" href="#section_4" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                               
+
+                                <li><a class="dropdown-item" href="occupational.html">Occupational Therapy</a></li>
+
+                                <li><a class="dropdown-item" href="family.html">Family Therapy</a></li>
+
+                                <li><a class="dropdown-item" href="psychology.html">Psychological Support </a></li>
+
+                                <li><a class="dropdown-item" href="support.html">Psycho-Social Support </a></li>
+                                <li><a class="dropdown-item" href="Social work.html">Social Work </a></li>
+
+                                <li><a class="dropdown-item" href="Inter-faith.html">Inter-Faith</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <section class="hero-section hero-section-full-height">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 p-0">
+                            <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/new/fasaa 2.jpg" class="carousel-image img-fluid" alt="...">
+                                        
+                                        <div class="carousel-caption d-flex flex-column justify-content-end" >
+                                            <h2 style="color: white;">More than just a rehab</h2>
+                                            <styl src="images/logo.png" class="logo img-fluid" alt="FASAA Rehabilitation Center">
+                                            <p style="color: white; font-size: 5px;"></p>
+                                        </div>
+                                    </div>
+
+                                        
+                                    </div>
+
+                                   
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+           
+
+
+
+            <section class="section-padding section-bg" id="section_2">
+                <div class="container-fluid mb-5" style="background: #f6f6f6;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 px-0">
+                            <img width="100%" class="img-fluid" src="images/new/about-us.jpg" alt="Image">
+                        </div>
+                        <div class="col-lg-6 py-5 py-lg-0 px-3 px-lg-5">
+                            <h2>About Us</h2>
+                            <p>FASAA Rehabilitation Centre was started in 2023 in response to the Drug and Substance Abuse pandemic that is ravaging our nation Zimbabwe. FASAA Rehabilitation Centre is equipped with cutting-edge technology and staffed by dedicated mental health professionals who are committed to providing the highest quality care to individuals recovering from the adverse effects of abusing drugs and substances. Each client receives mental health care and support from the following mental health professionals:</p>
+                                    
+                                                    <ul>
+                                                    <li>Psychiatrists</li>
+                                                    <li>General Practitioners</li>
+                                                    <li>Psychologists</li>
+                                                    <li>Counsellors</li>
+                                                    <li>Family therapists</li>
+                                                    <li>Psychiatrist Nurses</li>
+                                                    <li>Chaplaincy</li>
+                                                    <li>Life Coaching</li>
+                                                    <li>Social Work </li>
+                                                    <li>  Mindset Reprogramming </li>
+                                                    <li> Occupational Therapy       </li>
+
+                                                    </ul>	
+                                            <p>FASAA Rehabilitation Centre aims not only to rehabilitate but also to empower individuals so that they can regain their potential, strength, self esteem and become once again productive members of society.</p>
+                                        
+                            
+                        </div>
+                    </div>
+                 </div>           
+            </section>
+
+
+            <section class="section-padding">
+                <div class="container">
+                     <div class="row">
+ 
+                         <div class="col-lg-10 col-12 text-center mx-auto">
+                             <h3 style="color: #717275;">Our Pillars</h3>
+                             <hr style="width: 15%; margin-left: 43%;" >
+                            
+                         </div>
+ 
+                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0" style="width: 33%;">
+                             <div class="featured-block d-flex justify-content-center align-items-center">
+                                 <a href="mental-health.html" class="d-block">
+                                    <p><strong>PILLAR 1</strong><br>
+                                     <img src="images/medical.jpg" class="featured-block-image img-fluid" alt="" style="height: 200px;"><br>
+ 
+                                     <p><strong>Medical Treatment</strong> <br><br>We provide comprehensive medical treatment tailored to individual needs. Click here to learn more about our services and how we support your journey to wellness!</p>
+                                 </a>
+                             </div>
+                         </div>
+ 
+ 
+                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0" style="width: 33%;">
+                             <div class="featured-block d-flex justify-content-center align-items-center">
+                                 <a href="support.html" class="d-block">
+                                    <p><strong>PILLAR 2</strong><br>
+                                     <img src="images/support.jpg" class="featured-block-image img-fluid" alt="" style="height: 200px;"><br>
+ 
+                                     <p><strong>Psycho-Social Support</strong><br> <br> We offer a safe space to share experiences and build resilience drwaning from the medical and other Practitioners. Click below to find out how we help individuals navigate their recovery journey. </p>
+                                 </a>
+                             </div>
+                         </div>
+ 
+                         
+ 
+                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0" style="width: 33%;">
+                             <div class="featured-block d-flex justify-content-center align-items-center">
+                                 <a href="Inter-faith.html" class="d-block">
+                                    <p><strong>PILLAR 3</strong><br>
+                                     <img src="images/inter_faith.JPG" class="featured-block-image img-fluid" alt="" style="height: 200px;"> <br>
+ 
+                                     <p><strong>Spiritual Support</strong><br> <br>The Charplins division promote interfaith initiative in rehabilitation thus promoting understanding and respect among diverse religious beliefs, fostering a supportive community for recovery.Emphasis is put on shared values and collaboration to enhance emotional and spiritual healing.</p>
+                                 </a>
+                             </div>
+                         </div>
+ 
+                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4" style="width: 33%;">
+                             <div class="featured-block d-flex justify-content-center align-items-center">
+                                 <a href="family.html" class="d-block">
+                                    <p><strong>PILLAR 4</strong><br>
+                                     <img src="images/family.jpg" class="featured-block-image img-fluid" alt="" style="height: 200px;"> <br>
+ 
+                                     <p><strong> The Family</strong><br> <br>  Our Family Therapy program aims to strengthen relationships and improve communication among family members. Click here to discover how we support families in the healing process.</p>
+                                 </a>
+                             </div>
+                         </div>
+ 
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4" style="width: 33%;">
+                             <div class="featured-block d-flex justify-content-center align-items-center">
+                                 <a href="community.html" class="d-block">
+                                    <p><strong>PILLAR 5</strong><br>
+                                     <img src="images/community.jpg" class="featured-block-image img-fluid" alt="" style="height: 200px;"> <br>
+ 
+                                     <p><strong>Community</strong><br> <br> The community program aims to raise awareness through education and awareness raising programs.Click here to learn more.</p>
+                                 </a>
+                             </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4" style="width: 33%;">
+                            <div class="featured-block d-flex justify-content-center align-items-center">
+                                <a href="stakeholders.html" class="d-block">
+                                    <p><strong>PILLAR 6</strong><br>
+                                    <img src="images/R.jpg" class="featured-block-image img-fluid" alt="" style="height: 200px;"> <br>
+
+                                    <p><strong>Stakeholders</strong><br> <br> FASAA Rehabilitation Centre are the backbone of our organisation,providing unwavering support,expertise and resources that enable us to deliver exceptional care and services.</p>
+                                </a>
+                            </div>
+                       </div>
+ 
+                     </div>
+                 </div>
+             </section>
+
+
+             <section class="section-padding section-bg" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center mb-4">
+                        <h3 style="color: #717275;">Our Digital Products </h3>
+                        <hr style="width: 15%; margin-left: 43%;" >
+                    </div>
+                
+                    
+                    <div class="product-container">
+                        <div class="product-title">Family Therapy</div>
+                        <div class="product-description">Support for families to improve communication and resolve conflicts.</div>
+                        <div class="price">$100</div>
+                        <div class="button-container">
+                            <button class="read-more-button"><a href="family.html" style="color: #fff;">Read More...</a> </button>                            
+                            <div class="button-spacing"></div>
+                            <button class="order-button" onclick="openModal('Family Therapy', 100)">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-container">
+                        <div class="product-title">Occupational Therapy</div>
+                        <div class="product-description">Therapy that focuses on helping individuals achieve independence in all areas of their lives.</div>
+                        <div class="price">$120</div>
+                        <div class="button-container">
+                            <button class="read-more-button"><a  href="occupational.html" style="color: #fff;">Read More...</a> </button>                            <div class="button-spacing"></div>
+                            <button class="order-button" onclick="openModal('Occupational Therapy', 120)">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-container">
+                        <div class="product-title">Psychiatrist</div>
+                        <div class="product-description">Specialized therapy to address spiritual and emotional healing.</div>
+                        <div class="price">$90</div>
+                        <div class="button-container">
+                            <button class="read-more-button"><a href="family.html" style="color: #fff;">Read More...</a> </button>                            
+                            <div class="button-spacing"></div>
+                            <button class="order-button" onclick="openModal('Sacatrist', 90)">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-container">
+                        <div class="product-title">Counseling</div>
+                        <div class="product-description">One-on-one sessions to help individuals cope with personal challenges.</div>
+                        <div class="price">$80</div>
+                        <div class="button-container">
+                            <button class="read-more-button"><a href="family.html" style="color: #fff;">Read More...</a> </button>  
+                            
+                            <div class="button-spacing"></div>
+                            <button class="order-button" onclick="openModal('Counseling', 80)">Book Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Modal -->
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <h2 id="modalTitle"></h2>
+                            <p>Price: $<span id="modalPrice"></span></p>
+                            
+                            <div class="form-container" id="formContainer">
+                                <h3>Enter Your Details</h3>
+                                <input type="text" id="customerName" placeholder="Full Name" required>
+                                <input type="email" id="customerEmail" placeholder="Email" required>
+                                <input type="tel" id="customerPhone" placeholder="Phone" required>
+                                <input type="text" id="customerLocation" placeholder="Location of Inquiry" required>
+                                <select id="customerCountry" required>
+                                    <option value="" disabled selected>Select Country</option>
+                                    <option value="United States">United States</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <input type="text" id="customerAddress" placeholder="Address" required>
+                                <select id="addictionProblem" required>
+                                    <option value="" disabled selected>Select Addiction Problem</option>
+                                    <option value="Substance Abuse">Substance Abuse</option>
+                                    <option value="Alcoholism">Alcoholism</option>
+                                    <option value="Gambling">Gambling</option>
+                                    <option value="Internet Addiction">Internet Addiction</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <textarea id="customerDescription" placeholder="Brief Description" rows="4" required></textarea>
+                                <button onclick="showPaymentMethods()">Submit</button>
+                            </div>
+                    
+                            <div class="payment-methods" id="paymentMethods" style="display: none;">
+                                <p>Select Payment Method:</p>
+                                <div class="button-container">
+                                    <button class="order-button">EcoCash</button>
+                                    <div class="payment-spacing"></div>
+                                    <button class="order-button">Payment Gateway</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+            
+          
+            
+            <section class="section-padding" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center mb-4">
+                            <h3 style="color: #717275;">Video Showing FASAA Rehab </h3>
+                            <hr style="width: 15%; margin-left: 43%;" >
+                        </div>
+
+                        
+
+                       
+
+                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" style="width: 70%;">
+                            
+
+                                <div class="custom-block">
+                                    <div class="custom-block-body">
+
+
+                              <section class="video-section">
+                                           
+                                            <div class="video-container" style="margin-left: 150px;">
+                                              <iframe width="760" height="415" src="FASAA 1.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                             </section>
+
+
+
+
+
+
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                    </div>
+                </div>
+            </section>
+
+            
+
+           
+
+
+            <section class="testimonial-section section-padding section-bg" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h2 class="mb-lg-3">Testimonies</h2>
+                            
+                                <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                           <div class="carousel-caption">
+                                                <h4 class="carousel-title">After training we went to do shopping.Once again l want to thank FASAA and Dr Abigail Magwenzi for the greet work.To Mudiwa l say the sky is the limit. Go on girl!</h4>
+
+                                                <small class="carousel-name"><span class="carousel-name-title">TEMBA MULISWA</span></small>
+                                           </div>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <div class="carousel-caption">
+                                                <h4 class="carousel-title">Thank you FASAA and Dr Abigail Magwenzi for the work on my son.He is now serving in the house of God.Keep up the good work.</h4>
+
+                                                <small class="carousel-name"><span class="carousel-name-title">Mai Karuru</small>
+                                            </div>
+                                        </div>
+
+                                        
+                                          <ol class="carousel-indicators">
+                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                                                    
+                                               </li>
+
+                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                                                    
+                                               </li>
+
+                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
+                                                    
+                                               </li>
+
+                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
+                                                    
+                                               </li>
+                                          </ol>
+
+                                 </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4">
+                        <img src="images/logo.png" class="logo img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item"><a href="history.html" class="footer-menu-link">Our Story</a></li>
+
+                            <li class="footer-menu-item"><a href="news.html" class="footer-menu-link">Newsroom</a></li>
+
+                            <li class="footer-menu-item"><a href="our-team.html" class="footer-menu-link">Our Team</a></li>
+
+                           
+                            <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">Video</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-telephone me-2"></i>
+
+                            <a href="tel: +263 77 288 8479" class="site-footer-link">
+                                +263 77 288 8479 / +263 77 779 8600
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                getbetter@fasaa.org
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex mt-3">
+                            <i class="bi-geo-alt me-2"></i>
+                            4164 Nharira View, Norton, Zimbabwe
+                        </p>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-7 col-12">
+                            <p class="copyright-text mb-0">Copyright © 2025 <a href="#">FASAA</a> Rehabilitation Centre.
+                        	 </a></p>
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="https://x.com/fasaa_centre" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.facebook.com/fasaarehab" class="social-icon-link bi-facebook"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.instagram.com/fasaa_rehab_001?utm_source=qr&igsh=YXM1dWVlZjRzdnF0" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="//www.linkedin.com/in/fasaa-rehab-5a60742b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://youtube.com/@fasaarehabilitationcentre?si=1rpS9r0WTaMQhex_" class="social-icon-link bi-youtube"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
+
+<script>
+    function openModal(title, price) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalPrice').innerText = price;
+        document.getElementById('myModal').style.display = "block";
+        document.getElementById('formContainer').style.display = "block"; // Show the form
+        document.getElementById('paymentMethods').style.display = "none"; // Hide payment methods
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
+
+    function showPaymentMethods() {
+        document.getElementById('formContainer').style.display = "none"; // Hide the form
+        document.getElementById('paymentMethods').style.display = "block"; // Show payment methods
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target === document.getElementById('myModal')) {
+            closeModal();
+        }
+    }
+</script>
